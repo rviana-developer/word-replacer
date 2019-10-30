@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Word-Replacer</title>
+  {{ style('/assets/css/bootstrap.min.css')}}
+  {{ style('/assets/css/style.css')}}
+</head>
+<body>
+<form class="form-signin" action="{{route('form.store')}}" method="POST" enctype="multipart/form-data">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Word-Replacer</h1>
+    </div>
+    {{ csrfField() }}
+    <div class="form-group">
+      <input type="file" class="" name="image" accept="image/png, image/jpeg, image/jpg" required>
+    </div>
+    <div class="form-label-group">
+      <input type="text" class="form-control" name="placeholder1" required>
+      <label>Placeholder 1</label>
+    </div>
+    <div class="form-label-group">
+      <input type="text" class="form-control" name="placeholder2" required>
+      <label>Placeholder 2</label>
+    </div>
+    <div class="form-label-group">
+      <input type="text" class="form-control" name="placeholder3" required>
+      <label>Placeholder 3</label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Gerar DOC</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2019</p>
+  </form>
+
+  {{ script('/assets/js/jquery.min.js')}}
+  {{ script('/assets/js/bootstrap.min.js')}}
+  </body>
+</html>
